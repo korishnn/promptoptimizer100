@@ -1,0 +1,22 @@
+{
+  "name": "promptoptimizer100",
+  "version": "1.0.0",
+  "description": "100 curated Claude Code prompt styles that auto-classify your task and apply the optimal format",
+  "keywords": ["claude-code", "prompt", "optimizer", "skill", "ai"],
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/promptoptimizer100"
+  },
+  "bin": {
+    "promptoptimizer100": "bin/install.sh"
+  },
+  "scripts": {
+    "test": "node tests/validate-styles.js",
+    "install": "node bin/install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

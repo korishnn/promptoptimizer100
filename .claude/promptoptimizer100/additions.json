@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "additions": [
+    {
+      "id": "shortcode-expander",
+      "name": "Shortcode Expander",
+      "tokens": "~30",
+      "description": "Expands shorthand style references in user input",
+      "rules": {
+        "map": {
+          "@strict": "cr-strict",
+          "@security": "cr-security",
+          "@perf": "cr-performance",
+          "@tdd": "test-tdd",
+          "@arch": "arch-system-design",
+          "@db": "gen-db-schema",
+          "@api": "gen-rest-api",
+          "@bug": "debug-bug-hunt",
+          "@refactor": "refactor-simplify",
+          "@docs": "docs-readme",
+          "@learn": "learn-eli5",
+          "@commit": "write-commit",
+          "@pr": "write-pr-description",
+          "@sec": "sec-audit",
+          "@docker": "devops-docker",
+          "@k8s": "devops-kubernetes"
+        }
+      },
+      "instruction": "Scan the user's request for shortcodes like @strict or @tdd. If found, use the mapped style instead of the auto-classified one."
+    },
+    {
+      "id": "format-guard",
+      "name": "Format Guard",
+      "tokens": "~40",
+      "description": "Ensures output follows the appropriate structure for the task",
+      "rules": {
+        "code-review": "Rank findings by severity (CRITICAL > MAJOR > MINOR > INFO). Include file:line references. Group by file.",
+        "code-gen": "Include the filename as a markdown heading above each code block. List all files generated at the top.",
+        "testing": "Use describe/it blocks. Show test output expectations. Cover edge cases section.",
+        "documentation": "Use proper markdown headings, code fences, and table formatting.",
+        "debugging": "Start with root cause hypothesis. Show evidence. End with fix.",
+        "learning": "Start with the simplest explanation, then layer detail. Use analogies.",
+        "architecture": "Structure as: context > decision > rationale > alternatives. Use mermaid diagrams.",
+        "writing": "Follow conventional format for the type (Conventional Commits, changelog standards).",
+        "default": "Use clear markdown structure. Separate concerns with headings. Use code fences."
+      },
+      "instruction": "After writing the response, apply the format rules matching the selected style category."
+    },
+    {
+      "id": "context-check",
+      "name": "Context Meter",
+      "tokens": "~40",
+      "description": "Quick estimation of whether the rewritten prompt fits efficiently in context",
+      "rules": {
+        "max_rewritten_tokens": 8000,
+        "overflow_action": "If the rewritten prompt is very long, suggest a lighter alternative: 'This prompt is heavy. Consider using a more specific style or narrowing scope.'",
+        "underflow_action": "If very short, add the general best-practices footer: 'Be thorough. Cover edge cases. Explain your reasoning.'"
+      },
+      "instruction": "Before executing, note whether the prompt is unusually long or short. If long, suggest trimming; if short, add thoroughness instructions."
+    },
+    {
+      "id": "tone-adapt",
+      "name": "Tone Adapt",
+      "tokens": "~25",
+      "description": "Adjusts verbosity and tone based on task signals",
+      "rules": {
+        "urgent_signals": ["urgent", "asap", "quick", "fast", "simple", "just"],
+        "urgent_tone": "Be terse. Prioritize code/output over explanation. One-liner summaries OK.",
+        "learning_signals": ["explain", "learn", "understand", "how does", "what is"],
+        "learning_tone": "Explain reasoning. Include examples. Define terms.",
+        "complex_signals": ["complex", "large", "multi-step", "architecture"],
+        "complex_tone": "Structure with headings. Summarize at top. Progressive detail.",
+        "default_tone": "Balanced. Direct answer first, reasoning second."
+      },
+      "instruction": "Detect tone signals in the user's request and adjust verbosity/style accordingly."
+    },
+    {
+      "id": "style-chain",
+      "name": "Style Chain",
+      "tokens": "~40",
+      "description": "Handles multi-phase tasks by chaining multiple styles",
+      "examples": [
+        "Write and test a CRUD API → [gen-rest-api] then [test-integration]",
+        "Design schema, build API, add auth → [arch-db-schema] then [gen-rest-api] then [sec-auth]",
+        "Refactor and document → [refactor-simplify] then [docs-inline-comments]"
+      ],
+      "instruction": "If the user's request implies multiple phases (build then test, design then implement), chain the relevant styles sequentially. Address each phase in order. Mention the chain to the user: 'Using chain: [style1] → [style2].'"
+    }
+  ]
+}

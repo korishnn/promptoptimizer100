@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "categories": {
+    "code-review": {
+      "description": "Reviewing existing code for bugs, style, architecture",
+      "styles": [
+        "cr-strict",
+        "cr-security",
+        "cr-performance",
+        "cr-api-design",
+        "cr-migration",
+        "cr-dependency",
+        "cr-style",
+        "cr-correctness",
+        "cr-concurrency",
+        "cr-data-flow"
+      ]
+    },
+    "testing": {
+      "description": "Writing or generating tests",
+      "styles": [
+        "test-tdd",
+        "test-unit",
+        "test-integration",
+        "test-e2e",
+        "test-property",
+        "test-mutation",
+        "test-regression",
+        "test-coverage"
+      ]
+    },
+    "debugging": {
+      "description": "Finding root cause of failures",
+      "styles": [
+        "debug-bug-hunt",
+        "debug-stack-trace",
+        "debug-memory-leak",
+        "debug-race-condition",
+        "debug-regression",
+        "debug-root-cause"
+      ]
+    },
+    "code-gen": {
+      "description": "Creating new code from scratch",
+      "styles": [
+        "gen-crud-api",
+        "gen-react-component",
+        "gen-nextjs-page",
+        "gen-sql-query",
+        "gen-migration",
+        "gen-cli",
+        "gen-cron",
+        "gen-webhook",
+        "gen-rest-api",
+        "gen-graphql",
+        "gen-db-schema",
+        "gen-docker-config",
+        "gen-config-file",
+        "gen-middleware"
+      ]
+    },
+    "refactoring": {
+      "description": "Restructuring existing code",
+      "styles": [
+        "refactor-rename",
+        "refactor-extract",
+        "refactor-modernize",
+        "refactor-deduplicate",
+        "refactor-simplify",
+        "refactor-split",
+        "refactor-convert",
+        "refactor-rearchitect"
+      ]
+    },
+    "architecture": {
+      "description": "Designing systems, schemas, APIs",
+      "styles": [
+        "arch-system-design",
+        "arch-db-schema",
+        "arch-api-design",
+        "arch-event-driven",
+        "arch-microservices",
+        "arch-directory"
+      ]
+    },
+    "devops": {
+      "description": "Infrastructure, CI/CD, containers",
+      "styles": [
+        "devops-docker",
+        "devops-kubernetes",
+        "devops-ci-cd",
+        "devops-terraform",
+        "devops-deploy",
+        "devops-monitoring"
+      ]
+    },
+    "documentation": {
+      "description": "Writing docs, specs, explanations",
+      "styles": [
+        "docs-readme",
+        "docs-api-docs",
+        "docs-changelog",
+        "docs-migration-guide",
+        "docs-tech-spec",
+        "docs-inline-comments"
+      ]
+    },
+    "learning": {
+      "description": "Understanding code or concepts",
+      "styles": [
+        "learn-eli5",
+        "learn-deep-dive",
+        "learn-compare",
+        "learn-pros-cons",
+        "learn-tutorial"
+      ]
+    },
+    "writing": {
+      "description": "Commit messages, PRs, release notes, blogs",
+      "styles": [
+        "write-commit",
+        "write-pr-description",
+        "write-rfc",
+        "write-release-notes",
+        "write-postmortem",
+        "write-blog"
+      ]
+    },
+    "security": {
+      "description": "Finding vulnerabilities",
+      "styles": [
+        "sec-audit",
+        "sec-owasp",
+        "sec-input-validation",
+        "sec-auth",
+        "sec-dependency"
+      ]
+    },
+    "performance": {
+      "description": "Optimizing speed or memory",
+      "styles": [
+        "perf-profile",
+        "perf-bundle",
+        "perf-query",
+        "perf-n-plus-one",
+        "perf-caching"
+      ]
+    },
+    "framework": {
+      "description": "Language and framework-specific patterns",
+      "styles": [
+        "fw-django",
+        "fw-fastapi",
+        "fw-go-concurrency",
+        "fw-rust-borrow",
+        "fw-react-perf",
+        "fw-nextjs-ssr",
+        "fw-typescript",
+        "fw-python-idioms",
+        "fw-sql",
+        "fw-terraform",
+        "fw-kubernetes",
+        "fw-express",
+        "fw-flask",
+        "fw-spring-boot",
+        "fw-rails"
+      ]
+    }
+  }
+}
